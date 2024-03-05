@@ -9,7 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1ad1126-afd2-4819-8bd5-57005d817421" name="Changes" comment="1" />
+    <list default="true" id="e1ad1126-afd2-4819-8bd5-57005d817421" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/maltsev/springcourse/controllers/BatchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/batch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35/storage_v2/_src_/database/sc_people.XmckLQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35/storage_v2/_src_/database/sc_people.XmckLQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35/storage_v2/_src_/database/sc_people.XmckLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35/storage_v2/_src_/database/sc_people.XmckLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35/storage_v2/_src_/database/sc_people.XmckLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4558ff0-5f4a-40b8-8859-b682eb800b35/storage_v2/_src_/database/sc_people.XmckLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maltsev/springcourse/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maltsev/springcourse/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/maltsev/springcourse/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maltsev/springcourse/dao/PersonDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +75,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 9.0.86.executor&quot;: &quot;Run&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kirill Maltsev/IdeaProjects/java-filmorate&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kirill Maltsev/IdeaProjects/spring-mvc-app1/src/main/webapp/WEB-INF/views/batch&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,6 +91,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kirill Maltsev\IdeaProjects\spring-mvc-app1\src\main\webapp\WEB-INF\views\batch" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kirill Maltsev\IdeaProjects\spring-mvc-app1\src\main\webapp\WEB-INF\views\people" />
     </key>

@@ -11,9 +11,7 @@
       <schema-mapping>
         <introspection-scope>
           <node negative="1">
-            <node kind="database">
-              <name qname="@" />
-              <name qname="ewm-main" />
+            <node kind="database" qname="@">
               <node kind="schema" qname="@" />
             </node>
             <node kind="database" qname="sc_people">
