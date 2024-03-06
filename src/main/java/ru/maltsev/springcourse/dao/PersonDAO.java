@@ -13,8 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
@@ -33,8 +32,14 @@ public class PersonDAO {
     }
 
     @SneakyThrows
+    public Optional<Person> show(String email) {
+        return jdbcTemplate.query("SELECT * FROM person WHERE email=?",
+                        new BeanPropertyRowMapper<>(Person.class), email).stream().findAny();
+    }
+
+    @SneakyThrows
     public void save(Person person) {
-        jdbcTemplate.update("INSERT INTO person VALUES (1, ?, ?, ?)",
+        jdbcTemplate.update("INSERT INTO person(name, age, email) VALUES (?, ?, ?)",
                 person.getName(), person.getAge(), person.getEmail());
     }
 
@@ -86,31 +91,6 @@ public class PersonDAO {
 
         long after = System.currentTimeMillis();
         System.out.println("Batch time (ms): " + (after - before));
-    }
-
-    public void testBatchUpdateMap() {
-        Map<Integer, Person> people1000 = create1000People().stream().collect(Collectors.toMap(Person::getId, person -> person));
-        long before = System.currentTimeMillis();
-
-        jdbcTemplate.batchUpdate("INSERT INTO person VALUES (?, ?, ?, ?)",
-                new BatchPreparedStatementSetter() {
-                    @Override
-                    public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
-                        Person person = people1000.get(i);
-                        preparedStatement.setInt(1, person.getId());
-                        preparedStatement.setString(2, person.getName());
-                        preparedStatement.setInt(3, person.getAge());
-                        preparedStatement.setString(4, person.getEmail());
-                    }
-
-                    @Override
-                    public int getBatchSize() {
-                        return people1000.size();
-                    }
-                });
-
-        long after = System.currentTimeMillis();
-        System.out.println("Batch + map time (ms): " + (after - before));
     }
 
     private List<Person> create1000People() {

@@ -28,10 +28,4 @@ public class BatchController {
         personDAO.testBatchUpdate();
         return "redirect:/people";
     }
-
-    @GetMapping("/with-plus-map")
-    public String withBatchMap() {
-        personDAO.testBatchUpdateMap();
-        return "redirect:/people";
-    }
 }
