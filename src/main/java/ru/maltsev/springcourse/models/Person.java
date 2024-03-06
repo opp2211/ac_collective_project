@@ -19,4 +19,7 @@ public class Person {
     @NotEmpty(message = "Name should not be empty")
     @Email(message = "Email should be valid")
     private String email;
+    @Pattern(regexp = "[A-Z]\\w+, [A-Z]\\w+, \\d{6}",
+            message = "Address should be in this format: Country, City, 000000(Postal code)")
+    private String address;
 }

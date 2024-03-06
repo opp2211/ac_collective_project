@@ -7,6 +7,8 @@ import org.springframework.validation.Validator;
 import ru.maltsev.springcourse.dao.PersonDAO;
 import ru.maltsev.springcourse.models.Person;
 
+import java.util.Optional;
+
 @Component
 @RequiredArgsConstructor
 public class PersonValidator implements Validator {
@@ -20,7 +22,8 @@ public class PersonValidator implements Validator {
     public void validate(Object o, Errors errors) {
         Person person = (Person) o;
 
-        if (personDAO.show(person.getEmail()).isPresent()) {
+        Optional<Person> personFromDbByEmail = personDAO.show(person.getEmail());
+        if (personFromDbByEmail.isPresent() && personFromDbByEmail.get().getId() != person.getId()) {
             errors.rejectValue("email", "", "This email is already taken");
         }
     }
